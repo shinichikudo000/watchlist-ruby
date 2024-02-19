@@ -3,8 +3,8 @@ class Api::V1::AnimesController < ApplicationController
   
     # GET /animes
     def index
-      @animes = Anime.order(created_at: :desc)
-      render json: @animes
+      @anime = Anime.order(created_at: :desc)
+      render json: @anime
     end
   
     # GET /animes/1
@@ -17,7 +17,7 @@ class Api::V1::AnimesController < ApplicationController
       @anime = Anime.new(anime_params)
   
       if @anime.save    
-        render json: @anime, status: :created, location: @anime
+        render json: @anime, status: :created, location: api_v1_animes_url(@anime)
       else
         render json: @anime.errors, status: :unprocessable_entity
       end

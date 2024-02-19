@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
   namespace :api do
     namespace :v1 do
-      resources :animes, only: [:index, :show, :create, :update, :destroy]
+      resources :animes
     end
   end
   # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.
