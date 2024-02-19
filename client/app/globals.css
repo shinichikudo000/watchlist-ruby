@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+ 
+:root {
+  background-color: black;
+  padding: 5rem 10rem 5rem 10rem;
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  height: 100%;
+}
